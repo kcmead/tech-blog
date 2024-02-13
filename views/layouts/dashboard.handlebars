@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta information for character set and viewport settings -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ghibli">
+
+  <title>Dashboard | Tech Blog</title>
+  <link href="/images/favicon.ico" rel="shortcut icon">
+
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="flex-column min-100-vh">
+  <!-- Navigation bar -->
+  <nav class="navbar">
+    <ul class="flex-row">
+      <!-- Home link -->
+      <li class="li-inline nav-item"><a href="/">Home</a></li>
+      <!-- Dashboard link -->
+      <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
+      <!-- Logout link with id for JavaScript interaction -->
+      <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header section with the app title and link to the dashboard -->
+  <header class="hero">
+    <h1 class="app-title"><a href="/dashboard">Your Dashboard</a></h1>
+  </header>
+
+  <!-- Main content area -->
+  <main class="col-auto">
+    <!-- Rendered content goes here (using triple curly braces for unescaped content) -->
+    {{{body}}}
+  </main>
+
+  <!-- Footer with a link to create a new post in the dashboard -->
+  <footer class="footer flex-row justify-center">
+    <a href="/dashboard/new">➕ New Post</a>
+  </footer>
+</body>
+
+</html>
+
+<!-- Include Logout JavaScript -->
+<script src="/js/logout.js"></script>

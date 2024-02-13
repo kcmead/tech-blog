@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta tags for character set, viewport, author, and title -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ghibli">
+  <title>Home | Tech Blog</title>
+
+  <!-- Favicon and Font styles -->
+  <link href="/images/favicon.ico" rel="shortcut icon">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="flex-column min-100-vh">
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <!-- Home Link -->
+      <li class="li-inline nav-item"><a href="/">Home</a></li>
+      <!-- Dashboard Link -->
+      <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
+      <!-- Conditionally render login link with UNLESS -->
+      {{#unless loggedIn}}
+        <!-- Login Link -->
+        <li class="li-inline nav-item"><a href="/login">Login</a></li>
+      {{/unless}}
+      <!-- Logout Link -->
+      <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header Section with Blog Title -->
+  <header class="hero">
+    <h1 class="app-title"><a href="/">The Tech Blog</a></h1>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="col-auto">
+    <!-- Dynamic Content Placeholder (Body) -->
+    {{{body}}}
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="flex-row justify-center">
+    &copy; The Tech Blog Folks
+  </footer>
+</body>
+
+</html>
+
+<!-- Include Logout JavaScript if user is logged in -->
+{{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+{{/if}}

@@ -1,0 +1,19 @@
+<!-- Greeting Row for Logged-In User -->
+<div class="row">
+  <div class="col-auto">
+    <!-- Comment: Display a greeting message for the logged-in user -->
+    <h2>Hi {{user.username}}! </h2>
+  </div>
+</div>
+<br>
+
+<!-- Check if there are posts available -->
+{{#if posts.length}}
+  <!-- Post Card Container -->
+  <div class="card flex-column">
+    <!-- Comment: Loop through each post and render the editItem partial -->
+    {{#each posts as |post|}}
+      {{> editItem post}}
+    {{/each}}
+  </div>
+{{/if}}

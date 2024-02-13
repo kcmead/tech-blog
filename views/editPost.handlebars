@@ -1,0 +1,35 @@
+<!-- Edit Post Card -->
+<div class="card">
+  <!-- Card Header for Editing a Post -->
+  <h2 class="card-header">Edit Post</h2>
+
+  <!-- Edit Post Form -->
+  <form class="card-body" id="edit-post-form">
+    <!-- Title Input Field with Value from the Existing Post -->
+    <div>
+      <label class="form-label">Title:</label>
+      <input class="form-input" type="text" name="post-title" value="{{post.postTitle}}"/>
+    </div>
+    
+    <!-- Content Textarea Field with Value from the Existing Post and Character Limitation -->
+    <div>
+      <label class="form-label">Content:</label>
+      <textarea class="form-textarea form-input" name="post-body" data-number="8">{{post.postContent}}</textarea>
+    </div>
+    
+    <!-- Edit Button -->
+    <button class="btn btn-primary" type="submit">EDIT</button>
+    
+    <!-- Hidden Input for Post ID -->
+    <input type="hidden" name="post-id" value="{{post.id}}"/>
+  </form>
+
+  <!-- Additional Card Body for Delete Button -->
+  <div class="card-body">
+    <!-- Delete Button -->
+    <button class="btn btn-primary" type="click" id="delete-btn">DELETE</button>
+  </div> 
+</div>
+
+<!-- Include Edit JavaScript -->
+<script src="/js/edit.js"></script>

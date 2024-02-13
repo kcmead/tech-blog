@@ -1,0 +1,13 @@
+<!-- Post Card Body -->
+<div class="card-body">
+  <!-- Link to Edit Post Page -->
+  <a href="dashboard/edit/{{id}}">
+    <!-- Card Header with Post Title and Metadata -->
+    <div class="card-header flex-row justify-space-between">
+      <!-- Post Title Section -->
+      <div class="col-8">Post Title: {{postTitle}}</div>
+      <!-- Metadata Section: Author and Posted Date -->
+      <div class="col-4">posted by {{user.username}} on {{format_date dateCreated}}</div>
+    </div>
+  </a>
+</div>

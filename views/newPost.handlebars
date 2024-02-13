@@ -1,0 +1,29 @@
+<!-- New Post Card -->
+<div class="card">
+  <!-- Card Header for Creating a New Post -->
+  <h2 class="card-header">Create New Post</h2>
+  
+  <!-- New Post Form -->
+  <form class="card-body" id="new-post-form">
+    <!-- Hidden Input for Post ID (if applicable) -->
+    <input type="hidden" name="post-id" value="{{post.id}}"/>
+
+    <!-- Title Input Field -->
+    <div>
+      <label class="form-label">Title:</label>
+      <input class="form-input" type="text" name="post-title"/>
+    </div>
+
+    <!-- Content Textarea Field with Character Limitation -->
+    <div>
+      <label class="form-label">Content:</label>
+      <textarea class="form-textarea form-input" name="post-body" data-number="8"></textarea>
+    </div>
+    
+    <!-- Create Post Button -->
+    <button class="btn btn-primary">CREATE</button>
+  </form>
+</div>
+
+<!-- Include New Post JavaScript -->
+<script src="/js/new.js"></script>

@@ -1,0 +1,7 @@
+<!-- Display a list of posts using the each helper -->
+<div id="x">
+  {{#each posts as |post|}}
+    <!-- Include the 'postItem' partial template for each post -->
+    {{> postItem post}}
+  {{/each}}
+</div>
